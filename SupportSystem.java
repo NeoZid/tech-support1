@@ -21,6 +21,10 @@ public class SupportSystem
      * 6. Because they are aligned in the String class documentation
      * 7. Returns a string, with all leading and trailing space removed.
      * 8. 
+     * 9. 
+     * 10. boolean
+     * 11. startsWith change to equals
+     * 12. 
      * 
      */
     
@@ -50,8 +54,9 @@ public class SupportSystem
         while(!finished) {
             String input = reader.getInput();
             input = input.trim(); // #8
+            input = input.toLowerCase(); // #9
             
-            if(input.startsWith("bye")) {
+            if(input.equals("bye"))  { 
                 finished = true;
             }
             else {
