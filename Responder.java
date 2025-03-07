@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.HashMap;
 
 /**
  * The responder class represents a response generator object.
@@ -11,6 +12,7 @@ import java.util.Random;
 public class Responder
 {
     private ArrayList<String> responses;
+    private HashMap<String,String> responsesMap;
     private Random rand_gen;
     /**
      * Construct a Responder - nothing to do
@@ -19,7 +21,9 @@ public class Responder
     {
         rand_gen = new Random();
         responses = new ArrayList<>();
+        responsesMap = new HashMap<>();
         fillResponses();
+        fillResponsesMap();
     }
     
     private void fillResponses(){
@@ -29,15 +33,34 @@ public class Responder
         responses.add("I get that, what happened?");
         responses.add("ayo wassup cuh");
     }
+    
+    private void fillResponsesMap(){
+        responsesMap.put("whats up lil bro","you got some mcdonalds");
+        responsesMap.put("asdasdsa","374123");
+        responsesMap.put("what is this","supposed to be");
+    
+    }
+    
     /**
      * Generate a response.
      * @return   A string that should be displayed as the response
      */
-    public String generateResponse()
+    public String generateOldResponse()
     {
         int choice = rand_gen.nextInt(responses.size());
         return responses.get(choice);
     }
     
-    
+    public String generateResponse(String word)
+    {
+        String answer = responsesMap.get(word);
+            if (answer==null) {
+            answer = pickDefaultResponse(); 
+        }
+        return answer;
+    }
+    // #33
+    public String pickDefaultResponse(){
+        return "default";
+    }
 }
