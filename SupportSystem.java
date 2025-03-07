@@ -19,14 +19,12 @@ public class SupportSystem
      * 4. endsWith(String suffix)
      * 5. length() 
      * 6. Because they are aligned in the String class documentation
-     * 7. Returns a string, with all leading and trailing space removed.
-     * 8. 
-     * 9. 
+     * 7. Returns a string, with all leading and trailing space removed. 
      * 10. boolean
      * 11. startsWith change to equals
      * 12. It is in the java.util package; 
-     * 
-     * 14. 
+     * 15. The random numbers will return from 0-99
+     * 23. yes because in the method, we used .size which automatically updates when a new list has been added.
      * 
      */
     
@@ -54,7 +52,7 @@ public class SupportSystem
         printWelcome();
 
         while(!finished) {
-            String input = reader.getInput();
+            String input = reader.getInput(); // 
             input = input.trim(); // #8
             input = input.toLowerCase(); // #9
             
@@ -69,7 +67,7 @@ public class SupportSystem
 
         printGoodbye();
     }
-
+    
     /**
      * Print a welcome message to the screen.
      */
