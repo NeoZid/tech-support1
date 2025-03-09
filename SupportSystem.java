@@ -1,3 +1,6 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
 /**
  * This class implements a technical support system. It is the top level class 
  * in this project. The support system communicates via text input/output 
@@ -25,6 +28,14 @@ public class SupportSystem
      * 12. It is in the java.util package; 
      * 15. The random numbers will return from 0-99
      * 23. yes because in the method, we used .size which automatically updates when a new list has been added.
+     * 24. A HashMap constructs an empty HashMap with the default initial capacity (16) and the default loader factor (0.75)
+     * 25. get, put, remove, containsKey
+     * 26. isEmpty
+     * 28. Updates/overwrites the old values
+     * 29. Updates/overwrites the old values
+     * 30. 
+     * 31. It just results as "null"
+     * 32. contacts.getkeySet() 
      * 
      */
     
@@ -52,9 +63,10 @@ public class SupportSystem
         printWelcome();
 
         while(!finished) {
-            String input = reader.getInput(); // 
-            input = input.trim(); // #8
-            input = input.toLowerCase(); // #9
+            HashSet<String> input = reader.getInput();
+            // 
+            // input = input.trim(); // #8
+            // input = input.toLowerCase(); // #9
             
             if(input.equals("bye"))  { 
                 finished = true;
