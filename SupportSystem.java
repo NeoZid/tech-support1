@@ -68,7 +68,7 @@ public class SupportSystem
             // input = input.trim(); // #8
             // input = input.toLowerCase(); // #9
             
-            if(input.equals("bye"))  { 
+            if(input.contains("bye"))  { 
                 finished = true;
             }
             else {
